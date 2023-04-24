@@ -1,0 +1,139 @@
+QUE 1 What exactly is []
+
+ANS A programming languages such as Python, square brackets "[]" are used to represent a list data type. A list is an ordered collection of elements, where each element can be of any data type (e.g. integer, string, boolean, etc.) and can be accessed by its index within the list.
+
+
+
+QUE 3. What is the value of spam[int(int('3' * 2) / 11)]?
+
+
+ANS .The expression '3' * 2 evaluates to the string '33'. The int() function then converts this string to an integer value of 33.
+
+      Next, int('33'/11) performs integer division of 33 by 11, which results in 3 (since 33 divided by 11 equals 3 with a remainder of 0).
+
+QUE 4. What is the value of spam[-1]?
+
+ANS . The expression spam[-1] refers to the last element in the list assigned to the variable spam, regardless of the length of the list.
+
+QUE 5. What is the value of spam[:2]?
+
+
+ANS. he expression spam[:2] refers to a slice of the list assigned to the variable spam, starting from the beginning of the list (index 0) up to (but not including) index 2. This slice includes the first two elements of the list.
+
+QUE 7. How does bacon.append(99) change the look of the list value in bacon?
+
+ANS .The method append() is used to add a single element to the end of a list.
+
+
+QUE 8. How does bacon.remove('cat') change the look of the list in bacon?
+
+ANS The method remove() is used to remove the first occurrence of a specified element from a list.
+
+
+QUE 9. What are the list concatenation and list replication operators?
+
+ANS THE LIST CONCATENATION 
+
+     list1 = [1, 2, 3]
+     list2 = [4, 5, 6]
+     concatenated_list = list1 + list2
+     print(concatenated_list)  # Output: [1, 2, 3, 4, 5, 6]
+
+    AND THE LIST REPLICATION OPERATION
+   
+    original_list = [1, 2, 3]
+    replicated_list = original_list * 3
+    print(replicated_list)  # Output: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+QUE 10. What is difference between the list methods append() and insert()?
+
+ANS  THE LIST METHOD APPEND ()
+
+     my_list = [1, 2, 3]
+     my_list.append(4)
+     print(my_list)  # Output: [1, 2, 3, 4]
+
+
+     AND THE INSERT ()
+
+     my_list = [1, 2, 3]
+     my_list.insert(1, 4)
+     print(my_list)  # Output: [1, 4, 2, 3]
+
+
+QUE 11. What are the two methods for removing items from a list?
+
+ANS .  REMOVE ()
+       my_list = [1, 2, 3, 4, 5]
+       my_list.remove(3)
+       print(my_list)  # Output: [1, 2, 4, 5]
+
+
+       POP()
+       my_list = [1, 2, 3, 4, 5]
+       removed_item = my_list.pop(2)
+       print(my_list)  # Output: [1, 2, 4, 5]
+       print(removed_item)  # Output: 3
+
+QUE 12. Describe how list values and string values are identical.
+
+ans lists are mutable (can be changed) while strings are immutable (cannot be changed). Lists can also contain elements of different types, while strings can only contain characters.
+
+que 13. What's the difference between tuples and lists?
+
+ans Mutability: Lists are mutable, meaning their elements can be changed after they are created, while tuples are immutable, meaning their elements cannot be changed once they are created.
+
+    Syntax: Lists are created using square brackets [] while tuples are created using parentheses ().
+
+    Performance: Tuples are generally faster than lists for indexing and iteration because they use less overhead. Lists are more optimized for adding and removing elements because they can be resized.
+
+    Usage: Tuples are typically used to represent a collection of related values, while lists are often used when we need to manipulate a collection of values or add/remove elements dynamically.
+
+   # creating a list
+     my_list = [1, 2, 3, 4]
+ 
+   # creating a tuple
+     my_tuple = (1, 2, 3, 4)
+
+
+que 14. How do you type a tuple value that only contains the integer 42?
+
+
+and     my_tuple = (42,)
+        
+        beacuse 
+
+        Note that the comma after the value 42 is necessary to indicate that it is a tuple with only one element. Without the comma, Python would interpret the value as a simple integer and not as a tuple.
+
+que 15. How do you get a list value's tuple form? How do you get a tuple value's list form?
+
+ans       my_list = [1, 2, 3, 4]
+          my_tuple = tuple(my_list)
+          print(my_tuple)  # Output: (1, 2, 3, 4)
+
+
+
+          my_tuple = (1, 2, 3, 4)
+          my_list = list(my_tuple)
+          print(my_list)  # Output: [1, 2, 3, 4]
+
+que 16. Variables that "contain" list values are not necessarily lists themselves. Instead, what do they contain?
+
+ans    my_list = [1, 2, 3]
+        my_var = my_list
+
+        modifying the list using the variable
+        my_var.append(4)
+
+        print(my_list)  # Output: [1, 2, 3, 4]
+
+que17. How do you distinguish between copy.copy() and copy.deepcopy()?
+ 
+ans    import copy
+       my_list = [[1, 2], [3, 4]]
+       shallow_copy = copy.copy(my_list)
+       deep_copy = copy.deepcopy(my_list)
+       my_list[0][0] = 5
+       print(my_list)  # Output: [[5, 2], [3, 4]]
+       print(shallow_copy)  # Output: [[5, 2], [3, 4]]
+       print(deep_copy)  # Output: [[1, 2], [3, 4]]
