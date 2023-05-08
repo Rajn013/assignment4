@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 #  1 What exactly is []
 
 # an empty list, which is a data structure that can hold a collection of elements, but with no elements in it initially.
